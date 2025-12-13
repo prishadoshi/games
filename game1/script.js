@@ -1,6 +1,11 @@
+let playerState= 'run'
+const dropdown = document.getElementById('animations');
+dropdown.addEventListener('change', function(e){
+    playerState= e.target.value;
+})
+
 const canvas = document.getElementById('canvas1');
 const ctx= canvas.getContext('2d');
-console.log(ctx);
 
 /*interested in the canvas drawImage() method to draw animated characters*/
 
@@ -11,7 +16,6 @@ const playerImage= new Image();
 playerImage.src= "shadow_dog.png"
 const spriteWidth= 575;  //6876 % 12 (12 cols) = 573
 const spriteHeight =523  // 5230 % 10 (10 rows)
-let playerState= 'run'
 
 
 let frameX= 0;
